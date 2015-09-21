@@ -8,7 +8,7 @@ function save_options() {
     status.textContent = 'Options Saved!';
     setTimeout(function() {
       status.textContent = '';
-    }, 750);
+    }, 5000);
   });
 }
 
