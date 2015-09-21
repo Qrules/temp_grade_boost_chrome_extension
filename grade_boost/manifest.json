@@ -5,7 +5,7 @@
   "icons": { "16": "icon16.png",
              "48": "icon48.png",
             "128": "icon128.png" },
-  "description": "Temporarily changes the visible grades on RRISD HAC to be all 100s. For your use, modification, and distribution. Built by Qrules and ext0, GNU GPL v3.",
+  "description": "Temporarily changes the visible numbers on a page to be all 100s. For your use, modification, and distribution. Built by Qrules and ext0, GNU GPL v3.",
   "offline_enabled": true,
   "permissions": [
         "history"
