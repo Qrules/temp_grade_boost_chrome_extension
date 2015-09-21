@@ -1,10 +1,12 @@
 function save_options() {
   var low = 100.0;
   var error = 1;
-  var temp = document.getElementById('l').value;
-  if (temp >= 0 && temp <= 100)
+  var temp = 0.0;
+  temp = document.getElementById('l').value;
+  if (temp >= 0 && temp <= 100) {
     low = temp;
     error = 0;
+  }
   chrome.storage.sync.set({
     lowest: low
   }, function() {
@@ -13,7 +15,7 @@ function save_options() {
     if (error)
       status.textContent = 'Error, incorrect value!';
     else
-      status.textContent = 'Options Saved!';
+      status.textContent = 'Options Saved: ' + low + '!';
     setTimeout(function() {
       status.textContent = '';
     }, 5000);
