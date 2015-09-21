@@ -1,11 +1,11 @@
 {
   "manifest_version": 2,
-  "name": "Repopulate History Extension",
-  "version": "0.6",
+  "name": "Grade Boost",
+  "version": "0.1",
   "icons": { "16": "icon16.png",
              "48": "icon48.png",
             "128": "icon128.png" },
-  "description": "Repopulates web history with random sites. For your use, modification, and distribution. Built by Dehyrf, GNU GPL v3.",
+  "description": "Temporarily changes the visible grades on RRISD HAC to be all 100s. For your use, modification, and distribution. Built by Qrules and ext0, GNU GPL v3.",
   "offline_enabled": true,
   "permissions": [
         "history"
@@ -14,6 +14,6 @@
     "scripts": ["background.js"]
   },
   "browser_action": {
-    "default_title": "Repopulate"
+    "default_title": "Grade Boost"
   }
 }
