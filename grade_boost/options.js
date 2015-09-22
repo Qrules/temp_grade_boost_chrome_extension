@@ -1,6 +1,6 @@
 function save_options() {
   var low = document.getElementById('l').value;
-  low = (temp >= 0 && temp <= 100)?low:-1;
+  low = (low >= 0 && low <= 100)?low:-1;
   chrome.storage.sync.set({
     lowest: low
   }, function() {
