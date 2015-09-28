@@ -3,7 +3,7 @@ function save_options() {
   low = (low >= 0 && low <= 100)?low:-1;
   configBool = 0;
   chrome.storage.sync.set({
-    configured: configBool  
+    configured: configBool, 
     lowest: low
   }, function() {
     // Update status to let user know options were saved.
