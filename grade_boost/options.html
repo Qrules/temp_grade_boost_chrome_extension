@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="style.css">
   <title>GradeBoost Options</title>
   <style>
     body: { padding: 10px; }
@@ -8,12 +9,20 @@
 </head>
 
 <body>
+  Extension enabled:
+  <div class="onoffswitch">
+      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch">
+      <label class="onoffswitch-label" for="myonoffswitch">
+          <span class="onoffswitch-inner"></span>
+          <span class="onoffswitch-switch"></span>
+      </label>
+  </div>
   Lowest grade acceptable:
-  <input type="text" id="l" name="low"><br>
-
+  <input type="text" id="l" placeholder="min grade" name="low"><br>
   <div id="status"></div>
   <button id="save">Save</button>
-
   <script src="options.js"></script>
+
+  
 </body>
 </html>

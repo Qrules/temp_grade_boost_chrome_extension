@@ -1,9 +1,9 @@
 function save_options() {
   var low = document.getElementById('l').value;
+  var onBool = document.getElementById('myonoffswitch').checked;
   low = (low >= 0 && low <= 100)?low:-1;
-  configBool = 0;
   chrome.storage.sync.set({
-    configured: configBool, 
+    configured: onBool, 
     lowest: low
   }, function() {
     // Update status to let user know options were saved.
@@ -15,15 +15,17 @@ function save_options() {
   });
 }
 
-// Restores score stored in chrome.storage.
+ //Restores score stored in chrome.storage.
 function restore_options() {
-  // Use default value color of 100.
+  // Use default grade minimum of 100.
   chrome.storage.sync.get({
-    lowest: 100
+    lowest: 100,
+    configured: false
   }, function(items) {
-    document.getElementById('save').value = items.lowest;
+    document.getElementById('l').value = items.lowest;
+    document.getElementById('myonoffswitch').checked = items.configured;
   });
 }
 document.addEventListener('DOMContentLoaded', restore_options);
-document.getElementById('save').addEventListener('click',
-    save_options);
+document.getElementById('save').addEventListener('click', save_options);
+
